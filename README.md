@@ -1,15 +1,3 @@
-Based on your case study requirements and the comprehensive research, here's a professional GitHub setup for your project:
-
-## GitHub Project Name
-`aml-p2p-fraud-detection`
-
-## GitHub Description
-"Advanced machine learning system for detecting suspicious activity in peer-to-peer transactions using ensemble methods, graph neural networks, and severe class imbalance techniques. Implements production-grade AML transaction monitoring with 60-75% false positive reduction."
-
-## README.md
-
-
-```markdown
 # AML P2P Fraud Detection System
 
 ## Overview
@@ -37,7 +25,7 @@ Financial institutions detect only 2% of the $800B-$2T laundered globally each y
 
 ## Project Structure
 
-```
+```shell
 aml-p2p-fraud-detection/
 │
 ├── data/
@@ -67,7 +55,7 @@ aml-p2p-fraud-detection/
 ├── requirements.txt
 └── README.md
 ```
-```
+
 
 ## Key Features
 ### 1. Velocity-Based Features (60-85% detection rate)
@@ -140,8 +128,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - SoFi recruitment team for the challenging case study
 - Research papers on financial fraud detection (2023-2025)
 
-```
-```
 
 This README showcases:
 1. **Domain expertise** in AML/fraud detection

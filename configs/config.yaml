@@ -1,0 +1,37 @@
+# AML P2P Fraud Detection Configuration
+
+data:
+  raw_data_path: "data/raw/PS_20174392719_1491204439457_log.csv"
+  processed_data_path: "data/processed/"
+  
+  # Columns to exclude (they leak the label)
+  exclude_columns:
+    - "oldbalanceOrg"
+    - "newbalanceOrig" 
+    - "oldbalanceDest"
+    - "newbalanceDest"
+
+model:
+  # Cost matrix for optimization
+  cost_false_negative: 500
+  cost_false_positive: 5
+  
+  # Class imbalance ratio
+  imbalance_ratio: 773
+  
+  # Validation strategy
+  validation:
+    type: "time_based"
+    test_days: 7  # Last 7 days as holdout
+    
+features:
+  # Time windows for velocity features
+  velocity_windows: [1, 24, 168, 720]  # 1h, 24h, 7d, 30d in hours
+  
+  # Threshold for structuring detection  
+  structuring_threshold: 200000
+  structuring_margin: 0.9  # Look for transactions 90-100% of threshold
+  
+evaluation:
+  primary_metric: "auprc"  # Area Under Precision-Recall Curve
+  optimization_metric: "cost_based"  # Minimize total cost

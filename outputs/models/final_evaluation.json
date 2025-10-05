@@ -1,0 +1,22 @@
+{
+  "model_type": "XGBoost",
+  "auprc": 0.9769147118898411,
+  "threshold": 0.02,
+  "detection_rate": 0.9994606256742179,
+  "precision": 0.7146162745854223,
+  "total_alerts": 2593,
+  "alert_rate": 0.015976291257709347,
+  "net_benefit": 913535,
+  "roi": 70.46162745854222,
+  "key_features": {
+    "network_risk_score": 0.936,
+    "dest_fraud_rate": 0.029,
+    "is_risky_type": 0.018
+  },
+  "robustness": {
+    "new_destinations_auprc": 0.999,
+    "known_destinations_auprc": 0.871,
+    "transfer_auprc": 1.0,
+    "cash_out_auprc": 0.93
+  }
+}

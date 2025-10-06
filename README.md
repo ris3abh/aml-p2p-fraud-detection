@@ -1,4 +1,3 @@
-readme_content = """# P2P Transaction Fraud Detection - Case Study
 
 ## Executive Summary
 

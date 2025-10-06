@@ -241,6 +241,13 @@ PS_20174392719_1491204439457_log.csv
 - CatBoost: AUPRC 0.380, AUC-ROC 0.908 (BEST)
 - XGBoost: AUPRC 0.341, AUC-ROC 0.893
 
+| Model | AUPRC | AUC-ROC | Training Time (s) | Brier Score | Status |
+|-------|-------|---------|-------------------|-------------|--------|
+| **CatBoost** | **0.380** | **0.908** | 18.5 | 0.0086 (calibrated) | ✅ **SELECTED** |
+| XGBoost | 0.341 | 0.893 | 4.9 | - | ✅ Working |
+| LightGBM | 0.010 | 0.289 | 2.6 | - | ❌ Failed |
+| Adaptive Random Forest | 0.011 | 0.500 | 42.1 | - | ❌ Failed |
+
 **Failed models:**
 - LightGBM: AUPRC 0.010 (configuration issues with extreme imbalance)
 - Adaptive Random Forest: AUPRC 0.011 (class weight limitations in River library)
